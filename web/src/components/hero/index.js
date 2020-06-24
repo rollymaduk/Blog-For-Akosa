@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 // JSX
 import HeroSlider, { Slide, MenuNav, OverlayContainer } from "hero-slider";
 import Wrapper from "./wrapper";
@@ -11,7 +11,14 @@ import  image2 from './images/photo-of-woman-holding-tray.jpg'
 import image3 from './images/top-view-of-houses-and-building-roofs.jpg'
 import image4 from './images/top-view-photo-of-men-playing-board-game.jpg'
 const app = () => {
-  return (
+  const [rendered,setRendered]=useState(false)
+  useEffect(()=>{
+    if(!rendered){
+      setRendered(true)
+    }
+  },[rendered])
+
+  return (rendered?
     <HeroSlider
       slidingAnimation="top_to_bottom"
       orientation="vertical"
@@ -72,7 +79,7 @@ const app = () => {
       />
 
       <MenuNav />
-    </HeroSlider>
+    </HeroSlider>:<></>
   );
 };
 
