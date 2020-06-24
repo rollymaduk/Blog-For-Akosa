@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, {useEffect,useState} from "react";
 // JSX
 import HeroSlider, { Slide, MenuNav, OverlayContainer } from "hero-slider";
 import Wrapper from "./wrapper";
