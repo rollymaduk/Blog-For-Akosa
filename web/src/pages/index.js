@@ -9,6 +9,7 @@ import BlogPostPreviewList from '../components/blog-post-preview-list'
 import Container from '../components/container'
 import GraphQLErrorList from '../components/graphql-error-list'
 import SEO from '../components/seo'
+import Hero from '../components/hero'
 import Layout from '../containers/layout'
 
 export const query = graphql`
@@ -95,7 +96,9 @@ const IndexPage = props => {
         description={site.description}
         keywords={site.keywords}
       />
+      <Hero/>
       <Container>
+
         <h1 hidden>Welcome to {site.title}</h1>
         {postNodes && (
           <BlogPostPreviewList

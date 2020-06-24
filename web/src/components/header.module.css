@@ -2,12 +2,17 @@
 @import '../styles/custom-properties.css';
 
 .root {
-  position: relative;
+  position: fixed;
   z-index: 100;
+  left:0;
+  right:0;
+  color: white;
+  background-color: rgba(0,0,0,0.7);
 }
 
 .wrapper {
   box-sizing: border-box;
+
   margin: 0 auto;
   max-width: 960px;
   padding: 1em;
@@ -51,7 +56,7 @@
     fill: inherit;
   }
 
-  @media (--media-min-small) {
+  @media (min-width: 449px) {
     display: none;
   }
 }
@@ -76,7 +81,7 @@
     }
   }
 
-  @media (--media-max-small) {
+  @media (max-width: 450px) {
     position: absolute;
     background: var(--color-white);
     color: var(--color-black);
@@ -94,7 +99,7 @@
     }
   }
 
-  @media (--media-min-small) {
+  @media (min-width: 449px) {
     display: block;
 
     @nest & ul {

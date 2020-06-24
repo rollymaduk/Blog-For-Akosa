@@ -4,7 +4,7 @@ import {imageUrlFor} from '../lib/image-url'
 
 import styles from './author-list.module.css'
 
-function AuthorList ({items, title}) {
+function AuthorList({items, title}) {
   return (
     <div className={styles.root}>
       <h2 className={styles.headline}>{title}</h2>
